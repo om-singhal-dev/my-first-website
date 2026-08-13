@@ -1,4 +1,4 @@
-student = {name: "Om", age: 27, city: "Chandigarh", isLearning: true};
+let student = {name: "Om", age: 27, city: "Chandigarh", isLearning: true};
 
 console.log(student.name);
 
