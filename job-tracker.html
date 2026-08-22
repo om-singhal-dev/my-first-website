@@ -4,15 +4,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Job Tracker</title>
+        <link rel="stylesheet" href="job-tracker.css">
     </head>
     <body>
-        <input id="companyInput" placeholder="Company">
-        <input id="roleInput" placeholder="Role">
-        <input id="statusInput" placeholder="Status">
+        <main>
+            <h1>Job Application Tracker</h1>
 
-        <button id="addButton">Add Application</button>
+            <div>
+                <label for="companyInput">Company</label>
+                <input id="companyInput" type="text">
+            </div>
+            
+            <div>
+                <label for="roleInput">Role</label>
+                <input id="roleInput" type="text">
+            </div>
 
-        <ul id="applicationList"></ul>
+            <div>
+                <label for="statusInput">Status</label>
+                <input id="statusInput" type="text"> 
+            </div>
+
+            <button id="addButton">Add Application</button>
+
+            <h2>Applications</h2>
+
+            <ul id="applicationList"></ul>
+        </main>
 
         <script src="job-tracker.js"></script>
     </body>

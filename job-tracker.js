@@ -22,6 +22,8 @@ function renderApplications(){
         
         deleteButton.textContent = "Delete";
 
+        deleteButton.className = "delete-button";
+
         item.textContent =
             application.company + " - " +
             application.role + " - " +
@@ -57,7 +59,7 @@ addButton.addEventListener("click", function(){
 
     const application = {company: company, role: role, status: status};
 
-    applications.unshift(application);
+    applications.push(application);
 
     renderApplications();
 
