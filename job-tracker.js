@@ -8,8 +8,7 @@ const addButton = document.getElementById("addButton");
 
 const applicationList = document.getElementById("applicationList");
 
-const applications = [];
-
+const applications = JSON.parse(localStorage.getItem("applications")) || [];
 
 function renderApplications(){
 
@@ -36,6 +35,8 @@ function renderApplications(){
 
             applications.splice(index, 1);
 
+            localStorage.setItem("applications", JSON.stringify(applications));
+
             renderApplications();
         });
 
@@ -43,6 +44,8 @@ function renderApplications(){
         
     }
 }
+
+renderApplications();
 
 addButton.addEventListener("click", function(){
 
@@ -61,6 +64,10 @@ addButton.addEventListener("click", function(){
 
     applications.push(application);
 
+    localStorage.setItem("applications", JSON.stringify(applications));
+
+    console.log(localStorage.getItem("applications"));
+
     renderApplications();
 
     companyInput.value = "";
@@ -69,3 +76,4 @@ addButton.addEventListener("click", function(){
 
     statusInput.value = "";
 });
+
